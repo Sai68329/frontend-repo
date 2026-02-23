@@ -12,9 +12,10 @@ export default function History() {
   useEffect(() => {
     fetchHistory();
   }, []);
-
+// API.get(`/history/${id}`)
   const fetchHistory = async () => {
     try {
+      // const res = await API.get(`/history/${id}`)
       const res = await API.get(`/check/history/${id}`);
       setHistory(res.data);
     } catch (error) {
